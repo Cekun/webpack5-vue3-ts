@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <p class="title">{{title}}</p>
-    <img src="~/img/bg1.jpg" >
-  </div>
-  <div>
-    呵呵呵a Vue kiss 撒旦法f
+  <div class="container">
+    <img class="goods-img" src="~img/switch_img.png" alt="开关" style="width: 114px">
+    <svg-icon name="switch-online" class="switchBtn" />
   </div>
 </template>
 
@@ -22,9 +19,17 @@ export default defineComponent ({
 })
 </script>
 
-<style>
-#app {
-  background-color: antiquewhite;
-  font-size: 24px;
+<style lang="scss">
+.container {
+  display: flex;
+  justify-content: center;
+}
+.goods-img {
+  margin: 0 auto;
+}
+.switchBtn {
+  position: absolute;
+  top: 0;
+  right: 5%;
 }
 </style>
