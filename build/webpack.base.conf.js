@@ -7,6 +7,7 @@ const path = require("path"),
   viewDir = path.resolve(__dirname, "../src/views"),
   dirs = fs.readdirSync(viewDir);
 
+
 const envMode = process.env.envMode,
   prefixRE = /^VUE_APP_/; // 正则匹配以 VUE_APP_ 开头的 变量
 

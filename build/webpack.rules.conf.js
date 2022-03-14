@@ -1,4 +1,5 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+  path = require('path')
 
 module.exports = function (prodMode) {
   return [
@@ -45,12 +46,20 @@ module.exports = function (prodMode) {
       },
     },
     {
-      test: /\.(png|jpg|svg|gif)$/,
+      test: /\.(png|jpe?g|svg|gif)$/,
       type: "asset/resource",
       generator: {
         // [ext]前面自带"."
-        filename: "assets/[hash:8].[name][ext]",
+        filename: "assets/[name].[hash:8][ext]",
       },
+    },
+    {
+      test: /\.svg$/,
+      loader: 'svg-sprite-loader',
+      include: [path.resolve(__dirname, '../src/icons')],
+      options: {
+        symbolId: 'icon-[name]'
+      }
     }
   ];
 };

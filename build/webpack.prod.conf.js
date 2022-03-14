@@ -14,6 +14,7 @@ const webpackConfigProd = {
     filename: "./[name]/js/[name].[contenthash:8].js",
     publicPath: '../',
     clean: true, // Clean the output directory before emit.
+    // assetModuleFilename: "./[name]/assets/[name].[hash:8][ext][query]"
   },
   cache: {
 		type: 'filesystem',

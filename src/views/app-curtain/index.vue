@@ -29,7 +29,6 @@
 
 
 <script setup>
-import SvgIcon from '@/components/SvgIcon.vue';
 import { Slider as VanSlider} from 'vant'
 import { ref } from 'vue';
 const positionVal = ref(50)
