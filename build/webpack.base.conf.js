@@ -81,6 +81,7 @@ module.exports = function (prodMode) {
         utils: path.resolve(__dirname, "../src/utils"),
         api: path.resolve(__dirname, "../src/api"),
       },
+      extensions: ['.ts', '.vue', '.json', '.js']
     },
 
     // 将外部变量或者模块加载进来
