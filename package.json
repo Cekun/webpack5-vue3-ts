@@ -41,6 +41,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "core-js": "^3.21.1",
     "vant": "^3.4.3",
     "vue": "^3.2.31"
